@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<link rel="manifest" href="/site.webmanifest">
+
+
+
+<!-- Add meta description -->
+<meta name="description" content="Panashe Kavhu's portfolio showcasing expertise in electronics engineering and full-stack development">
+<meta name="keywords" content="Panashe Kavhu, Electronics Engineer, Full Stack Developer, UI/UX Designer">
+<meta name="author" content="Panashe Kavhu">
+<!-- Add canonical link -->
+<link rel="canonical" href="https://panashekavhu.co.zw">
+<!-- Add Open Graph tags -->
+<meta property="og:title" content="Panashe Kavhu">
+
+  <!-- Header -->
+   <header>
+    <div class="container">
+        <nav>
+            <div class="logo">Panashe Kavhu</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+            </button>
+            <div class="hamburger" onclick="toggleMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="profile-container">
+            <img 
+                src="images/Panashe.webp" 
+                alt="Panashe Kavhu" 
+                loading="lazy" 
+                class="profile-img"
+                width="200"
+                height="200"
+            >
+        </div>
+        <h1 class="fade-in">Panashe Kavhu</h1>
+        <p class="fade-in fade-in-delay-1">Electronics/Electrical Engineer | Full Stack Developer | UI/UX Designer |</p>
+        <p class="fade-in fade-in-delay-2">Creating innovative digital experiences that combine beautiful designs with powerful functionality.</p>
+        <div class="social-links">
+            <a href="https://github.com/Panashe0003" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/YourLinkedInUsername" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="https://twitter.com/panashe_00" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                </svg>
+            </a>
+            <a href="#" aria-label="Dribbble">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path>
+                </svg>
+            </a>
+        </div>
+        <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="fade-in">About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3 class="fade-in">Who I Am</h3>
+                <p class="fade-in fade-in-delay-1">I'm a passionate developer capable of crafting digital solutions that solve real-world problems. Away from the web and mobile app development l am an Electronics and Embedded systems Engineer.</p>
+                <p class="fade-in fade-in-delay-2">Currently, I'm focused on creating accessible and user-centered web applications that make a difference. And in the spirit of making a difference l have an affinity of implementing renewable energy systems like solar plants. </p>
+            </div>
+            <div class="skills">
+                <h3>Techstack</h3>
+                <div class="typing-container">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <!-- Add the scroll indicator here -->
+                <button  class="scroll-indicator">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="skills">
+        <h3 class="skills-title">Services</h3>
+        <div class="skills-container">
+            <div class="skill-card fade-in">
+                <h4>Web App development</h4>
+                <p>Building responsive and visually appealing web interfaces with clean, maintainable code.</p>
+            </div>
+            <div class="skill-card fade-in fade-in-delay-1">
+                <h4>Mobile App Development</h4>
+                <p>Developing dynamic and interactive mobile applications.</p>
+            </div>
+            <div class="skill-card fade-in fade-in-delay-2">
+                <h4>Embedded Systems Design</h4>
+                <p>Microcontroller based systems and remote IOT automated systems</p>
+            </div>
+            <div class="skill-card fade-in fade-in-delay-1">
+                <h4>Renewable Energy Systems</h4>
+                <p>Design, Installation and Maintanence of Renewable energy systems </p>
+            </div>
+            <div class="skill-card fade-in fade-in-delay-2">
+                <h4>UI/UX Design</h4>
+                <p>Designing intuitive and user-friendly experiences with a focus on accessibility and aesthetics.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="section-title">
+            <h2>My Projects</h2>
+        </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <img 
+                    src="images/PlanetParts.webp" 
+                    alt="Planet Parts Website" 
+                    class="project-img"
+                    loading="lazy"
+                    width="300"
+                    height="200"
+                >
+                <div class="project-info">
+                    <h3>Planet Parts Website</h3>
+                    <p>An e-commerce Website that helps users place orders for motor spares.</p>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind Css</span>
+                        <span class="tag">Postgres</span>
+                    </div>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img 
+                    src="images/planet1.jpg.jpg" 
+                    alt="Planet HR Website" 
+                    class="project-img"
+                    loading="lazy"
+                    width="300"
+                    height="200"
+                >
+                <div class="project-info">
+                    <h3>Planet HR Website</h3>
+                    <p>An HR consultancy platform built with modern technologies offering HR solutions for companies.</p>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind Css</span>
+                        <span class="tag">Postgres</span>
+                    </div>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img 
+                    src="images/PKE.webp" 
+                    alt="PKE Circuit Solutions" 
+                    class="project-img"
+                    loading="lazy"
+                    width="300"
+                    height="200"
+                >
+                <div class="project-info">
+                    <h3>PKE Circuit Solutions</h3>
+                    <p>A web app designed for an Electrical company venturing into Installation.</p>
+                    <div class="tags">
+                        <span class="tag">Html</span>
+                        <span class="tag">Tailwind Css</span>
+                        <span class="tag">Javascript</span>
+                    </div>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-card">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>Feel free to reach out for collaborations, opportunities</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>panashekavhu@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+263 787 058 730</p>
+                            <p>+263 773 400 502</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Harare, Zimbabwe</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/Panashe Kavhu" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Panashe0003" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/panashe_00" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/263787058730" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.05 11.05a9.91 9.91 0 0 1-1.32 5.05l-1.32 2.32a1 1 0 0 1-1.32.32l-2.32-1.32a9.91 9.91 0 0 1-5.05-1.32l-2.32-1.32a1 1 0 0 1-.32-1.32l1.32-2.32a9.91 9.91 0 0 1 1.32-5.05l2.32-1.32a1 1 0 0 1 1.32.32l1.32 2.32a9.91 9.91 0 0 1 5.05 1.32l2.32 1.32a1 1 0 0 1 .32 1.32z"></path>
+                            <path d="M16.24 7.76a4.5 4.5 0 0 1 0 6.36l-1.32 1.32a4.5 4.5 0 0 1-6.36 0l-1.32-1.32a4.5 4.5 0 0 1 0-6.36l1.32-1.32a4.5 4.5 0 0 1 6.36 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p class="copyright">© 2025 Panahe Kavhu. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Add Google Analytics script -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
