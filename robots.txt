@@ -1,3 +1,26 @@
+# www.panashekavhu.xyz robots.txt
+# Updated: 2025-04-23
+
+# Allow all robots complete access
 User-agent: *
 Allow: /
+Allow: /images/
+Disallow: /cgi-bin/
+
+# Crawl-delay to prevent server overload
+Crawl-delay: 10
+
+# Special rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://panashekavhu.xyz/sitemap.xml
+
+# Host preference
+Host: https://panashekavhu.xyz
