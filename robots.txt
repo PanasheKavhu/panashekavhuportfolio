@@ -20,7 +20,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://panashekavhu.xyz/sitemap.xml/
+Sitemap: https://panashekavhu.xyz/sitemap.xml
 
 # Host preference
-Host: https://panashekavhu.xyz
+Host: https://panashekavhu.xyz/
