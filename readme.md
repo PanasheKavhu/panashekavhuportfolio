@@ -28,7 +28,6 @@ This portfolio website highlights my skills, projects, and services offered. It 
 - **HTML5**: For structuring the content.
 - **CSS3**: For styling the website.
 - **JavaScript**: For interactive features and animations.
-- **Axios**: For potential API requests.
 - **SVG Icons**: For scalable and lightweight icons.
 
 ## Setup
@@ -37,12 +36,12 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/PanasheKavhu/panashekavhuportfolio.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd your-repo-name
+   cd panashekavhuportfolio
    ```
 
 3. Open `index.html` in your preferred web browser to view the website.
