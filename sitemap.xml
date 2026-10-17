@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://panashekavhu.xyz/</loc>
-        <lastmod>2026-10-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <image:image>
             <image:loc>https://panashekavhu.xyz/images/panashe-avatar.webp</image:loc>
         </image:image>
@@ -12,6 +12,9 @@
         </image:image>
         <image:image>
             <image:loc>https://panashekavhu.xyz/images/pke-circuit-solutions.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://panashekavhu.xyz/images/sp-portal.webp</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://panashekavhu.xyz/images/PlanetParts.webp</image:loc>

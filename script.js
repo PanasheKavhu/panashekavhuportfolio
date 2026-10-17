@@ -61,4 +61,29 @@ if (window.matchMedia('(hover: hover)').matches) {
     });
 }
 
+// Stacked project cards: shrink and dim each card as the next one slides over it
+const stackCards = [...document.querySelectorAll('.projects.stack .project')];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (stackCards.length > 1 && !reduceMotion.matches) {
+    let ticking = false;
+    const update = () => {
+        ticking = false;
+        stackCards.forEach((card, i) => {
+            const next = stackCards[i + 1];
+            if (!next) return;
+            const a = card.getBoundingClientRect();
+            const b = next.getBoundingClientRect();
+            const covered = Math.min(Math.max(1 - (b.top - a.top) / a.height, 0), 1);
+            card.style.transform = `scale(${1 - covered * 0.06})`;
+            card.style.filter = `brightness(${1 - covered * 0.35})`;
+        });
+    };
+    const onScroll = () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+}
+
 document.getElementById('year').textContent = new Date().getFullYear();
